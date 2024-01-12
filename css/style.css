@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    /*height: 100vh;*/
+    position: relative;
+    max-width: 650px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    background-image: url("../img/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.barra__tiempo {
+    height: 30px;
+    background-color: rgb(136, 118, 118);
+    border: 2px solid #eee;
+    border-radius: 100px;
+    overflow: hidden; /* Para recortar el progreso */
+}
+
+.contenedor__score {
+    background-color: #ccc;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 6px 10px;
+    border: 1px solid #999;
+    font-weight: 700;
+    color: #111;
+    overflow: hidden;
+}
+
+.contenedor__score > span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resulado {
+    background-color: #de8336;
+    color: #fff;
+    border: 2px solid #fff; 
+    padding: .1rem 1rem;
+    border-radius: 10px;
+}
+
+.barra__progreso {
+    width: 100%; /* Empieza vacía */
+    height: 100%;
+    background-color: #de8336; /* Degradado de color azul */
+    transition: width 10s linear; 
+}
+
+.casa__topo {
+    background-image: url("../img/casa.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.casa__topo img {
+    width: 100px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.botones {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.botones > button {
+    padding: 0 20px;
+    font-size: 40px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    font-family: VT323, sans-serif;
+    background-color: #3498db;
+}
+
+.botones > button:hover{
+    background-color: #49b1f6;
+    transition: .3s;
+}
